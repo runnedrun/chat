@@ -62,6 +62,7 @@ $("#signbutton").click(function() {
       console.log("It works!");
     }
       else {
+        $("#wrong").css({displa
       }
   })
 })
