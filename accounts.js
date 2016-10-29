@@ -68,4 +68,7 @@ $("#signbutton").click(function() {
 
 //Sign in session -------------------------------------------
 
-var se
+var session = {
+  name: username.val,
+}
+
