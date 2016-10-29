@@ -54,7 +54,6 @@ var password = $("#password");
 //On button press --------------
 
 $("#signbutton").click(function() {
-  console.log("hi")
   var realUser = username.val()
   var realPass = password.val()
   once(realUser, function(password) {
@@ -62,8 +61,11 @@ $("#signbutton").click(function() {
       console.log("It works!");
     }
       else {
-        $("#wrong").css({displa
+        $("#wrong").css({display: "block"})
       }
   })
 })
 
+//Sign in session -------------------------------------------
+
+var se
