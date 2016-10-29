@@ -58,11 +58,12 @@ $("#signbutton").click(function() {
   var realPass = password.val()
   once(realUser, function(password) {
     if (password == realPass) {
+      $("#right").css({display: "block"});
       yournameworks.push(realUser)
       console.log(session.name)
     }
       else {
-        $("#wrong").css({display: "block"})
+        $("#wrong").css({display: "block"});
       }
   })
 })

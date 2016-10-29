@@ -82,3 +82,10 @@
   margin-top: 25;
   display: none;
 }
+
+#right {
+  color: green;
+  margin-left: 300;
+  margin-top: 25;
+  display: none;
+}
