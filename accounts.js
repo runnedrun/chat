@@ -69,6 +69,8 @@ $("#signbutton").click(function() {
       $("#right").css({display: "block"});
       yournameworks = realUser
       console.log(session.name)
+      username.val("")
+      password.val("")
     }
       else {
         $("#wrong").css({display: "block"});
