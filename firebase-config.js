@@ -21,6 +21,12 @@ function onNewValue(name, callback) {
   })
 }
 
+function once(name, callback) {	
+  store.child("vars").child(name).on("value", function(data) {		
+    callback(data.val());
+  })
+}
+
 function addListItem(name, value) {		
   store.child("vars" + "/" + name).push(value)
 }
