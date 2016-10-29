@@ -75,3 +75,10 @@
   margin-top: 25;
   display: none;
 }
+
+#wrong {
+  color: red;
+  margin-left: 300;
+  margin-top: 25;
+  display: block;
+}
