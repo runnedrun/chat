@@ -58,7 +58,11 @@ $("#signbutton").click(function() {
   var realUser = username.val()
   var realPass = password.val()
   once(realUser, function(password) {
-    if (password ==
+    if (password == realPass) {
+      console.log("It works!");
+    }
+      else {
+      }
   })
 })
 
