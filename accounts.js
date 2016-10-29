@@ -16,14 +16,14 @@ $("#return").click(function() {
 
 var create = $("#create");
 
-//new user -------------
+//new user ------------------------------------------------
 
 var newUser = $("#enteruser");
 
 var user = "blah"
 
 
-//password check --------------------------------
+//password check -------------------------------------------
 
 var pass1 = $("#enterpass");
 var pass2 = $("#passcheck");
@@ -33,10 +33,10 @@ var pass2 = $("#passcheck");
 var yournameworks = "blah"
 
 var session = {
-  name: realUser,
+  name: yournameworks,
 }
 
-//On button press ---------------------------------
+//On button press Create ---------------------------------
 
 create.click(function() {
   user = newUser.val();
@@ -59,7 +59,7 @@ var username = $("#username");
 var password = $("#password");
 
 
-//On button press --------------
+//On button press Log in--------------
 
 $("#signbutton").click(function() {
   var realUser = username.val()
@@ -69,8 +69,6 @@ $("#signbutton").click(function() {
       $("#right").css({display: "block"});
       yournameworks = realUser
       console.log(session.name)
-      console.log(yournameworks)
-      console.log(realUser)
     }
       else {
         $("#wrong").css({display: "block"});
