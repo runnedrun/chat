@@ -58,7 +58,6 @@ $("#signbutton").click(function() {
   var realPass = password.val()
   once(realUser, function(password) {
     if (password == realPass) {
-      yournameworks = [""]
       yournameworks.push(realUser)
       console.log(session.name)
     }
