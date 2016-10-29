@@ -59,7 +59,7 @@ $("#signbutton").click(function() {
   once(realUser, function(password) {
     if (password == realPass) {
       yournameworks = [""]
-      yournameworks.replace("blah",realUser)
+      yournameworks.push(realUser)
       console.log(session.name)
     }
       else {
