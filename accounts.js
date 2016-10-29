@@ -23,12 +23,20 @@ var newUser = $("#enteruser");
 var user = "blah"
 
 
-//password check -------
+//password check --------------------------------
 
 var pass1 = $("#enterpass");
 var pass2 = $("#passcheck");
 
-//On button press ------
+//Sign in session -------------------------------------------
+
+var yournameworks = "blah"
+
+var session = {
+  name: realUser,
+}
+
+//On button press ---------------------------------
 
 create.click(function() {
   user = newUser.val();
@@ -70,13 +78,7 @@ $("#signbutton").click(function() {
   })
 })
 
-//Sign in session -------------------------------------------
 
-var yournameworks = "blah"
-
-var session = {
-  name: yournameworks,
-}
 
 //-----------------------------------------------------------
 
