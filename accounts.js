@@ -28,13 +28,6 @@ var user = "blah"
 var pass1 = $("#enterpass");
 var pass2 = $("#passcheck");
 
-//Sign in session -------------------------------------------
-
-var yournameworks = "blah"
-
-var session = {
-  name: realUser,
-}
 
 //On button press Create ---------------------------------
 
@@ -60,6 +53,13 @@ var password = $("#password");
 
 var realUser = "blah"
 
+//Sign in session -------------------------------------------
+
+var yournameworks = "blah"
+
+var session = {
+  name: realUser,
+}
 
 //On button press Log in--------------
 
