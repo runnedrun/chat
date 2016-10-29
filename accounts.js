@@ -33,7 +33,7 @@ var pass2 = $("#passcheck");
 var yournameworks = "blah"
 
 var session = {
-  name: yournameworks,
+  name: realUser,
 }
 
 //On button press Create ---------------------------------
@@ -58,19 +58,18 @@ var username = $("#username");
 
 var password = $("#password");
 
+var realUser = "blah"
+
 
 //On button press Log in--------------
 
 $("#signbutton").click(function() {
-  var realUser = username.val()
+   realUser = username.val()
   var realPass = password.val()
   once(realUser, function(password) {
     if (password == realPass) {
       $("#right").css({display: "block"});
-      yournameworks = realUser
       console.log(session.name)
-      username.val("")
-      password.val("")
     }
       else {
         $("#wrong").css({display: "block"});
