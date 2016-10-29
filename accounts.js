@@ -57,6 +57,8 @@ $("#signbutton").click(function() {
   console.log("hi")
   var realUser = username.val()
   var realPass = password.val()
-  storeValue(
+  once(realUser, function(password) {
+    // do some stuff here
+  })
 })
 
