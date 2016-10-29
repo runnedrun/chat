@@ -1,0 +1,77 @@
+#siscreen {
+  background-color: burlywood;
+  height: 2500;
+  width: 10000;
+  display: none;
+}
+
+#title {
+  text-align: center;
+  background-color: cornsilk;
+  border: 3px bisque solid;
+  border-radius: 20px;
+  width: 750;
+}
+
+.si {
+  display: block;
+}
+
+#password {
+  height: 30;
+  width: 200;
+  margin-top: 25;
+  margin-left: 300;
+}
+
+#username {
+  height: 30;
+  width: 200;
+  margin-left: 300;
+  margin-top:100;
+}
+
+#signbutton {
+  margin-left: 300;
+  margin-top: 25;
+}
+
+#signup {
+  color: blue;
+  text-decoration: underline;
+  margin-top: 50;
+  font-size: 10px;
+  margin-left: 300;
+  background-color: burlywood;
+}
+
+.su {
+  display: none;
+}
+
+#enteruser {
+  margin-left: 300;
+  margin-top: 25;
+}
+
+#enterpass {
+  margin-left: 300;
+  margin-top: 25;
+}
+
+#passcheck {
+  margin-left: 300;
+  margin-top: 25;
+}
+
+#create {
+  margin-left: 300;
+  margin-top: 25;
+}
+
+#nomatch {
+  color: red;
+  margin-left:300;
+  margin-top: 25;
+  display: none;
+}

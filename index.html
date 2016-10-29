@@ -3,11 +3,34 @@
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.0.4/firebase.js"></script>
     <link rel="stylesheet" href="chat.css"/>
+    <link rel="stylesheet" href="accounts.css"/>
   </head>
   <body>
+    <div id = "siscreen">
+      <div id="title">
+        <h1 id="stuff">
+          Please sign in
+        </h1>  
+        <input type="button" id="return" class="si" value="return to chat" />
+      </div>
+      <input class="si" id="username" placeholder="username" />
+      <input type="password" class-="si" id="password" placeholder="password" />
+      <input class="si" type="button" value="sign in!" id="signbutton" />
+      <input type="button" id="signup" value="don't have an account? sign up!" />
+      <div id ="signupstuff">
+        <input class="su" type="text" id="enteruser" placeholder="Create a username." />
+        <input class="su" type="password" id="enterpass" placeholder="Create a password." />
+        <input class="su" type="password" id="passcheck" placeholder="Re-enter your password." />
+        <input type="button" value="Create account" id="create" class="su" />
+        <div id="nomatch">These passwords do not match.</div>
+      </div>
+    </div>
+    <input type = "button" value = "sign in" id = "button">
     <div id = "lechat">
     </div>
     <input id = "input" type = "text" placeholder = "type to chat" />
+    <script src = "firebase-config.js"></script>
     <script src = "chat.js"></script>
+    <script src = "accounts.js"></script>
   </body>
 </html>
