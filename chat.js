@@ -13,6 +13,7 @@ input.keydown(function(e) {
   if (e.keyCode == 13) {
     var message = input.val();
     var antijosh = message.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    var useUser = (realUser + ":
     addListItem("saylist", antijosh);
     input.val("");
   }
@@ -23,6 +24,6 @@ input.keydown(function(e) {
 onNewListItem("saylist", function(r) {
   chatlist.push(r);
   var limit = chatlist.slice(chatlist.length - 30, chatlist.length);
-  chat.html(realUser + ":"  limit.join("<br>"));
+  chat.html(limit.join("<br>"));
  })
 
