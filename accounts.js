@@ -51,7 +51,7 @@ var username = $("#username");
 
 var password = $("#password");
 
-var realUser = "blah"
+var realUser = "anonymous user"
 
 //Sign in session -------------------------------------------
 
