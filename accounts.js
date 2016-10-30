@@ -55,10 +55,9 @@ var realUser = "blah"
 
 //Sign in session -------------------------------------------
 
-var yournameworks = "blah"
 
 var session = {
-  name: realUser,
+  name: realUser
 }
 
 //On button press Log in--------------
