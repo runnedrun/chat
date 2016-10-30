@@ -23,7 +23,7 @@ input.keydown(function(e) {
 
 onNewListItem("saylist", function(r) {
   chatlist.push(r);
-  var limit = chatlist.slice(chatlist.length - 20, chatlist.length);
+  var limit = chatlist.slice(chatlist.length - 29, chatlist.length);
   chat.html(limit.join("<br>"));
  })
 
