@@ -63,7 +63,8 @@ var session = {
 //On button press Log in--------------
 
 $("#signbutton").click(function() {
-  $("#wrong").css({display: "none"
+  $("#wrong").css({display: "none"})
+  $("#right").css({display: "none"})
    realUser = username.val()
   var realPass = password.val()
   once(realUser, function(password) {
