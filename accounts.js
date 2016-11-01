@@ -32,17 +32,25 @@ var pass2 = $("#passcheck");
 //On button press Create ---------------------------------
 
 create.click(function() {
+  var accountstyle = $("#color").val()
+  if (user.length < 11) {
   user = newUser.val();
+  }
+  else {
+    $("#toolong").css({display: "block"});
+  }
   if (pass1.val() == pass2.val()) {
     var newPass = pass1.val()
   }
     else {
-      $("#nomatch").css({display: "block"})
+      $("#nomatch").css({display: "block"});
     }
   storeValue(user,newPass)
+  storeValue(newPass, accountstyle)
   pass1.val("")
   pass2.val("")
   newUser.val("")
+  $("#color").val("")
 })
 
 //Sign In ----------------------------------------------------
@@ -51,14 +59,22 @@ var username = $("#username");
 
 var password = $("#password");
 
-var realUser = "anonymous user"
+var realUser = "Anonymous User"
 
 //Sign in session -------------------------------------------
 
-
+var signedin = 0
 var session = {
   name: realUser
 }
+
+//color------------------------------------------
+
+var accountColor = "black"
+
+//Wow! I'm an idiot------------------------------
+
+var jackIsDumb = "Anonymous User"
 
 //On button press Log in--------------
 
@@ -67,14 +83,20 @@ $("#signbutton").click(function() {
   $("#right").css({display: "none"})
    realUser = username.val()
   var realPass = password.val()
+  once(realPass, function(color) {
+    accountColor = color
+    console.log(accountColor);
+  })
   once(realUser, function(password) {
     if (password == realPass) {
       $("#right").css({display: "block"});
-      console.log(session.name)
+      signedin = 1
+     jackIsDumb = realUser
+     $("#topbar").html("You are signed in as " + jackIsDumb.fontcolor(accountColor));
     }
-      else {
-        $("#wrong").css({display: "block"});
-      }
+    else {
+      $("#wrong").css({display: "block"});
+    }
   })
 })
 

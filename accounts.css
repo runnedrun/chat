@@ -1,3 +1,7 @@
+#button {
+  margin-left: 95%;
+  position: absolute;
+}
 #siscreen {
   background-color: burlywood;
   height: 2500;
@@ -88,4 +92,16 @@
   margin-left: 300;
   margin-top: 25;
   display: none;
+}
+
+#toolong {
+  color: red;
+  margin-top: 25;
+  margin-left: 300;
+  display: none;
+}
+
+#color {
+  margin-top: 25;
+  margin-left: 300;
 }
