@@ -4,6 +4,7 @@
     <script src="https://www.gstatic.com/firebasejs/3.0.4/firebase.js"></script>
     <link rel="stylesheet" href="chat.css"/>
     <link rel="stylesheet" href="accounts.css"/>
+    <link rel="stylesheet" href="dm.css" />
   </head>
   <body>
     <div id = "siscreen">
@@ -23,7 +24,7 @@
         <input class="su" type="text" id="enteruser" placeholder="Create a username." />
         <input class="su" type="password" id="enterpass" placeholder="Create a password." />
         <input class="su" type="password" id="passcheck" placeholder="Re-enter your password." />
-        <input class="su" type="text" id="color" placeholder="what is your name color" />
+        <input class="su" type="text" id="color" placeholder="what is your fav color" />
         <div id="nomatch">These passwords do not match.</div>
         <div id="toolong">Your username must be a less than 10 characters</div>
         <input type="button" value="Create account" id="create" class="su" />
@@ -35,6 +36,8 @@
     <div id = "lechat">
     </div>
     <input id = "input" type = "text" placeholder = "type to chat" />
+    <img id ="getslid" src="http://www.freeiconspng.com/uploads/email-icon-23.png" />
+    <script src="dm.js"></script>
     <script src = "firebase-config.js"></script>
     <script src = "chat.js"></script>
     <script src = "accounts.js"></script>
