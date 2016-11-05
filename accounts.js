@@ -64,6 +64,7 @@ var realUser = "Anonymous User"
 //Sign in session -------------------------------------------
 
 var signedin = 0
+
 var session = {
   name: realUser
 }
@@ -93,6 +94,7 @@ $("#signbutton").click(function() {
       signedin = 1
      jackIsDumb = realUser
      $("#topbar").html("You are signed in as " + jackIsDumb.fontcolor(accountColor));
+    $("#dm").css({display: "inline" });
     }
     else {
       $("#wrong").css({display: "block"});

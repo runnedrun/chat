@@ -16,8 +16,7 @@ input.keydown(function(e) {
     var antijosh = message.replace(/</g, "&lt;").replace(/>/g, "&gt;");
     var cleanerUser = (String(jackIsDumb));
     var ccleanerUser = cleanerUser.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    var useUser = (ccleanerUser + ": " + antijosh);
-    addListItem("saylist", useUser + accountColor + accountColor.length);
+    addListItem("saylist", ccleanerUser +"\\\," + antijosh + "\\\," + accountColor);
     input.val("");
   }
 })
@@ -25,14 +24,23 @@ input.keydown(function(e) {
 // Display when new things are added _______________________________
 
 onNewListItem("saylist", function(r) {
+  var chatObject = {
+    username: "",
+    color: "",
+    message: "",
+  }
   var reclean = (r.replace(/</g, "&lt;").replace(/>/g, "&gt;"));
-  var getTheirColor1 = (reclean.slice(reclean.length-1))
-  var getTheirColor2 = (reclean.slice(reclean.length-getTheirColor1+1,reclean.length-1))
-  console.log(getTheirColor1)
-  console.log(getTheirColor2)
-  var workPlease = reclean.split(": ")[0]
-  var stylize = (workPlease.bold().fontcolor(accountColor) + ": " + reclean.split(": ")[1])
-  chatlist.push(stylize);
+  chatObject.username = (reclean.split("\\\,")[0]);
+  chatObject.color = (reclean.split("\\\,")[2]);
+  chatObject.message = (reclean.split("\\\,")[1]);
+  var lookForCommand = chatObject.message
+  var isImg = lookForCommand.indexOf("/img")
+  if (isImg > -1) {
+    var imgSrc = (lookForCommand.split("/img"))[1];
+    chatObject.message = ("<img src='" + imgSrc +"' />")
+  }
+  var finalMessage = ((chatObject.username).bold().fontcolor(chatObject.color) + ": ".bold().fontcolor(chatObject.color) + chatObject.message)
+  chatlist.push(finalMessage);
   var limit = chatlist.slice(chatlist.length - 20, chatlist.length);
   chat.html(limit.join("<br>"));
  })
